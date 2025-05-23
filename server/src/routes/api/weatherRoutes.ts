@@ -1,19 +1,43 @@
 import { Router } from 'express';
+import WeatherService from '../../service/weatherService.js';
+
 const router = Router();
+const weatherService = new WeatherService();
 
-// import HistoryService from '../../service/historyService.js';
-// import WeatherService from '../../service/weatherService.js';
+console.log('Registering weather routes...');
 
-// TODO: POST Request with city name to retrieve weather data
-router.post('/', (req, res) => {
-  // TODO: GET weather data from city name
-  // TODO: save city to search history
+// GET weather data
+router.get('/', async (req, res) => {
+    console.log('GET /api/weather called');
+    try {
+        const { city } = req.query;
+        if (!city) {
+            return res.status(400).json({ error: 'City parameter is required' });
+        }
+        const data = await weatherService.getWeatherData(city as string);
+        res.json(data);
+    } catch (error) {
+        console.error('Error fetching weather:', error);
+        res.status(500).json({ error: 'Failed to fetch weather data' });
+    }
 });
 
-// TODO: GET search history
-router.get('/history', async (req, res) => {});
+// POST weather request
+router.post('/', async (req, res) => {
+    console.log('POST /api/weather called', req.body);
+    try {
+        const { city } = req.body;
+        if (!city) {
+            return res.status(400).json({ error: 'City parameter is required' });
+        }
+        const data = await weatherService.getWeatherData(city);
+        res.json(data);
+    } catch (error) {
+        console.error('Error fetching weather:', error);
+        res.status(500).json({ error: 'Failed to fetch weather data' });
+    }
+});
 
-// * BONUS TODO: DELETE city from search history
-router.delete('/history/:id', async (req, res) => {});
+console.log('Weather routes registered');
 
 export default router;
