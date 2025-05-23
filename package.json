@@ -27,6 +27,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
     "bootstrap": "^5.3.3",
-    "node-fetch": "^2.7.0"
+    "node-fetch": "^2.7.0",
+    "start": "^5.1.0"
   }
 }
