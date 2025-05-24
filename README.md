@@ -2,7 +2,7 @@ Weather Dashboard
 
 https://github.com/Pricilla-Francis/Weather-Dashboard.git
 
-https://github-actions-ci-cd-setup-kndt.onrender.com
+
 
 
 
