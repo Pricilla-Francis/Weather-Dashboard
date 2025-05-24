@@ -1,39 +1,36 @@
-# Welcome to Rainy Days!
-For this project I wanted to make a website that would give the user a weather forecast for any city in the world.
+Weather Dashboard
 
-## Link to project:
-https://rainy-days.onrender.com/
+https://github.com/Pricilla-Francis/Weather-Dashboard.git
 
 
-
-## How It's Made:
-Using Typescript to run the node project directly from the terminal! 
-Made with VS Code it is hard coded for amazing interactivity!
-Javascript is used to make the website interactive and fun!
-
+# User Story
+AS A traveler
+I WANT to see the weather outlook for multiple cities
+SO THAT I can plan a trip accordingly
 
 
-**Tech used:**  JavaScript, Node, Typescript, Love and affection
+# Acceptance Criteria
+GIVEN a weather dashboard with form inputs
+WHEN I search for a city
+THEN I am presented with current and future conditions for that city, and that city is added to the search history
+WHEN I view current weather conditions for that city
+THEN I am presented with the city name, the date, an icon representation of weather conditions, a description of the weather for the icon's `alt` tag, the temperature, the humidity, and the wind speed
+WHEN I view future weather conditions for that city
+THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
+WHEN I click on a city in the search history
+THEN I am again presented with current and future conditions for that city
+
+# GitHub Actions CI/CD Setup
+
+This repository demonstrates a complete CI/CD (Continuous Integration / Continuous Deployment) workflow using **GitHub Actions**. It includes automated testing, linting, build, and deployment steps, and can be adapted to suit various project types (e.g., Node.js, React, Python, Docker, etc.).
 
 
+# Features
 
-## Lessons Learned:
-Had a lot of fun with this project! I learned a lot about how to use the weather API and how to use it to make the website interactive. It was very challenging to get the history of the cities to work.
+Automated testing on every push and pull request
+Code linting to enforce style consistency
+Build pipeline with artifact uploads
+Deployment to environments like GitHub Pages, Render, or Vercel
+Branch-specific workflows (e.g., only deploy `main`)
+Secrets management via GitHub
 
-
-## Contact:
-
-
-**Github:** https://github.com/eoreilly0906/Rainy-Days
-
-**Email:** edwardoreilly0906@gmail.com
-
-## Notes on code
-https://coding-boot-camp.github.io/full-stack/render/render-deployment-guide
-https://openweathermap.org/api/geocoding-api
-https://stackoverflow.com/questions
-https://openweathermap.org/api/geocoding-api
-https://home.openweathermap.org/api_keys
-https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys
-https://openweathermap.org/current#name
-https://www.geeksforgeeks.org/express-js-app-use-function/
